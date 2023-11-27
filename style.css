@@ -100,9 +100,8 @@
   }
   
   textarea {
-    
     width: 100vw;
-    height: 100vh;
+    height: 95vh;
     resize: none;
     border: none;
     outline: none;
@@ -110,3 +109,52 @@
     box-sizing: border-box;
     font-size: 16px;
   }   
+
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+/* Style for the buttons */
+.navbar button {
+    padding: 8px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #555;
+    color: white;
+}
+
+/* Style for the user section */
+.user-section {
+    display: flex;
+    align-items: center;
+}
+
+.user-icon {
+   
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    
+    margin-right: 10px;
+}
+
+/* For responsiveness */
+@media screen and (max-width: 300px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar button {
+        margin: 5px;
+        width: 100%;
+    }
+}
