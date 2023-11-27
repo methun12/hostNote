@@ -7,6 +7,14 @@
     
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!--
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/10.6.0/firebase-analytics.js"></script>
+    -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
    
     
 </head>
@@ -23,14 +31,33 @@
             <div class="burger">&#9776;</div>
         </nav>
     </header>
+    <div class="navbar">
+        <div class="user-section">
+            <!-- User icon -->
+            
+            <img class="user-icon" src="https://i.ibb.co/pzTr89k/Layer-1x.png" alt="Italian Trulli">
+            <!-- The icon should represent the total user -->
+            <span id="userCount">1</span> <!-- Example user count -->
+        </div>
+
+        <div>
+            <!-- Buttons on the right side -->
+            <button onclick="copyText()">Paste</button>
+            <button onclick="pasteText()">Copy</button>
+            <button class="saveBtn">Save</button>
+        </div>
+    </div>
+
+    </div>
     <div class="fullscreen">
-  <textarea placeholder="Enter text here"></textarea>
+  <textarea id="text-box" placeholder="Enter text here"></textarea>
 </div>
 
     <!---
     <textarea class="longInput" cols="30" rows="10"></textarea> --->
     
     <script src="main.js"></script>
+ 
 
 </body>
 </html>
