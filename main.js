@@ -98,7 +98,7 @@ function extractUidFromUrl(url) {
    const databaseRef = database.ref(uniqueUserID+'/pages');
    databaseRef.update({ 'page1': document.getElementById('text-box').value })
        .then(() => {
-           console.log('Value updated or new path created successfully!');
+           console.log('Value updated or new path created successfully!!');
        })
        .catch((error) => {
            console.error('Error updating value or creating new path: ', error);
