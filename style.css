@@ -1,0 +1,112 @@
+        /* Reset some default styles */
+        body, h1, h2, h3, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+        }
+        
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        
+        .nav-links li {
+            margin-right: 20px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        .main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        .burger {
+            visibility: hidden;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                z-index: 1;
+            }
+        
+            .nav-links.active {
+                display: flex;
+            }
+        
+            .nav-links li {
+                margin: 10px 0;
+            }
+        
+            .burger {
+                visibility: visible;
+                display: block;
+                cursor: pointer;
+                font-size: 1.5rem;
+            }
+        }
+#inp{
+    text-align: left;
+    padding:  0.4em;
+    width: 400px;
+    height: 200px;
+    
+}     
+.fullscreen {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  textarea {
+    
+    width: 100vw;
+    height: 100vh;
+    resize: none;
+    border: none;
+    outline: none;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+  }   
