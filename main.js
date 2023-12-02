@@ -103,6 +103,13 @@ function extractUidFromUrl(url) {
     
     console.log("Click");
 });
+document.querySelector(".hostbtn").addEventListener("click", function () {
+
+  document.getElementById('alert-background').style.display = 'block';
+
+  console.log("Clickhost");
+
+});
 
 function setDefData(){
      const hostUid = localStorage.getItem('tmpUid');
@@ -111,6 +118,9 @@ function setDefData(){
           }
 }
   
+function closeDialog() {
+  document.getElementById('alert-background').style.display = 'none';
+}
   
 
           

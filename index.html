@@ -23,10 +23,10 @@
         <nav>
             <div class="logo">My Website</div>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a class="hostbtn" href="#">Host</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Feedback</a></li>
             </ul>
             <div class="burger">&#9776;</div>
         </nav>
@@ -49,9 +49,22 @@
     </div>
 
     </div>
+    <!-- Alert dialog -->
+<div id="alert-background" class="alert-background">
+    <div class="alert-dialog">
+      <span><strong>QR Code:</strong></span><br>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=SampleQRCode" alt="QR Code"><br><br>
+      <span><strong>URL:</strong></span><br>
+      <p>https://www.example.com</p>
+      <button class="btn copy-btn" onclick="copyUrl()">Copy URL</button><br><br>
+      <button class="btn cancel-btn" onclick="closeDialog()">Cancel</button>
+    </div>
+  </div>
     <div class="fullscreen">
   <textarea id="text-box" placeholder="Enter text here"></textarea>
 </div>
+
+
 
     <!---
     <textarea class="longInput" cols="30" rows="10"></textarea> --->
