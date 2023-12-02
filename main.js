@@ -42,6 +42,7 @@ document.querySelector(".burger").addEventListener("click", function () {
 
             
             yourFunction(); 
+            setDefData();
           });
         
           // Example function to be called on page load
@@ -68,16 +69,12 @@ document.querySelector(".burger").addEventListener("click", function () {
           }
           
           // Example usage:
-          const uniqueUserID = generateUserID();
+          const uniqueUserID = localStorage.getItem("tmpUid");
           console.log(uniqueUserID); // Display the generated 6-digit integer user ID
 
           // Retrieve data from localStorage
-const username = localStorage.getItem('username');
-if(username==null){
-    //alert(null);
 
-}
-console.log(username); // This will log 'JohnDoe' if it was previously set
+          //console.log(username); // This will log 'JohnDoe' if it was previously set
 
 function extractUidFromUrl(url) {
     const uidRegex = /\/(\d+)(\?|$)/;
@@ -108,7 +105,10 @@ function extractUidFromUrl(url) {
 });
 
 function setDefData(){
-
+     const hostUid = localStorage.getItem('tmpUid');
+      if(hostUid==null){
+            localStorage.setItem('tmpUid',generateUserID());
+          }
 }
   
   
