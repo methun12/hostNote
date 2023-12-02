@@ -24,7 +24,7 @@
             <div class="logo">My Website</div>
             <ul class="nav-links">
                 <li><a class="hostbtn" href="#">Host</a></li>
-                <li><a href="#">Join</a></li>
+                <li><a class="jointbtn" href="#">Join</a></li>
                 <li><a href="#">Settings</a></li>
                 <li><a href="#">Feedback</a></li>
             </ul>
@@ -60,9 +60,21 @@
       <button class="btn cancel-btn" onclick="closeDialog()">Cancel</button>
     </div>
   </div>
+  <div class="overlay" id="overlay">
+    <div class="alert-dialog">
+      <h2>Join the Session</h2>
+      <input type="text" id="inputField" placeholder="Enter code">
+      <div class="btn-group">
+        <button class="join-btn" onclick="joinSession()">Join</button>
+        <button class="cancel-btn" onclick="hideDialog()">Cancel</button>
+      </div>
+    </div>
+  </div>
     <div class="fullscreen">
   <textarea id="text-box" placeholder="Enter text here"></textarea>
 </div>
+
+
 
 
 

@@ -110,7 +110,13 @@ document.querySelector(".hostbtn").addEventListener("click", function () {
   console.log("Clickhost");
 
 });
+document.querySelector(".jointbtn").addEventListener("click", function () {
 
+  document.getElementById("overlay").style.display = "flex";
+
+  console.log("JoinClick");
+
+});
 function setDefData(){
      const hostUid = localStorage.getItem('tmpUid');
       if(hostUid==null){
@@ -120,6 +126,9 @@ function setDefData(){
   
 function closeDialog() {
   document.getElementById('alert-background').style.display = 'none';
+}
+function hideDialog() {
+  document.getElementById("overlay").style.display = "none";
 }
   
 
