@@ -25,7 +25,7 @@
             <ul class="nav-links">
                 <li><a class="hostbtn" href="#">Host</a></li>
                 <li><a class="jointbtn" href="#">Join</a></li>
-                <li><a href="#">Settings</a></li>
+                <li><a class="settingsbtn" href="#">Settings</a></li>
                 <li><a href="#">Feedback</a></li>
             </ul>
             <div class="burger">&#9776;</div>
@@ -60,6 +60,7 @@
       <button class="btn cancel-btn" onclick="closeDialog()">Cancel</button>
     </div>
   </div>
+  <!---Join Diloag-->
   <div class="overlay" id="overlay">
     <div class="alert-dialog">
       <h2>Join the Session</h2>
@@ -67,6 +68,25 @@
       <div class="btn-group">
         <button class="join-btn" onclick="joinSession()">Join</button>
         <button class="cancel-btn" onclick="hideDialog()">Cancel</button>
+      </div>
+    </div>
+  </div>
+  <!--Settings Diloag-->
+  <div class="overlays" id="overlays">
+    <div class="alert-dialogs">
+      <h2 class="hs">Settings</h2>
+      <label for="copyToggle">Auto Copy:</label>
+      <input type="checkbox" id="copyToggle" class="toggle-btns"><br>
+      <label for="editToggle">Everyone can Edit Text:</label>
+      <input type="checkbox" id="editToggle" class="toggle-btns"><br>
+      <label for="resetToggle">Reset Shared URL:</label>
+      <select id="resetToggle">
+        <option value="everyTime">Every Time</option>
+        <option value="never">Never</option>
+      </select>
+      <div class="btn-group">
+        <button class="cancel-btns" onclick="hideDialogS()">Cancel</button>
+        <button class="save-btns" onclick="saveSettings()">Save</button>
       </div>
     </div>
   </div>

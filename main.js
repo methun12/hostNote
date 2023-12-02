@@ -48,7 +48,7 @@ document.querySelector(".burger").addEventListener("click", function () {
           // Example function to be called on page load
           function yourFunction() {
             console.log('Page has finished loading');
-            document.getElementById("text-box").value="hi";
+           // document.getElementById("text-box").value="hi";
           }
 
           function generateUserID() {
@@ -76,47 +76,45 @@ document.querySelector(".burger").addEventListener("click", function () {
 
           //console.log(username); // This will log 'JohnDoe' if it was previously set
 
-function extractUidFromUrl(url) {
-    const uidRegex = /\/(\d+)(\?|$)/;
-    const match = url.match(uidRegex);
-    if (match && match[1]) {
-      return parseInt(match[1], 10);
-    } else {
-      return null;
-    }
-  }
+          function extractUidFromUrl(url) {
+            const uidRegex = /\/(\d+)(\?|$)/;
+            const match = url.match(uidRegex);
+            if (match && match[1]) {
+              return parseInt(match[1], 10);
+            } else {
+              return null;
+            }
+          }
   
   // Example usage 1:
   const url1 = "https://rcvcalculator.blogspot.com/"+uniqueUserID;
   const uid1 = extractUidFromUrl(url1);
   console.log(uid1); // Output: 543543546465
 
-  document.querySelector(".saveBtn").addEventListener("click", function () {
-   const databaseRef = database.ref(uniqueUserID+'/pages');
-   databaseRef.update({ 'page1': document.getElementById('text-box').value })
-       .then(() => {
-           console.log('Value updated or new path created successfully!!');
-       })
-       .catch((error) => {
-           console.error('Error updating value or creating new path: ', error);
-       });
-    
-    console.log("Click");
-});
-document.querySelector(".hostbtn").addEventListener("click", function () {
+           document.querySelector(".saveBtn").addEventListener("click", function () {
+              const databaseRef = database.ref(uniqueUserID+'/pages');
+              databaseRef.update({ 'page1': document.getElementById('text-box').value })
+                   .then(() => {
+                        console.log('Value updated or new path created successfully!!');
+                     })
+                   .catch((error) => {
+                        console.error('Error updating value or creating new path: ', error);
+                 });
+     
+                console.log("Click");
+           });
 
-  document.getElementById('alert-background').style.display = 'block';
+          document.querySelector(".hostbtn").addEventListener("click", function () {
+                document.getElementById('alert-background').style.display = 'block';
+            });
 
-  console.log("Clickhost");
+          document.querySelector(".jointbtn").addEventListener("click", function () {
+                document.getElementById("overlay").style.display = "flex";
+            });
+          document.querySelector(".settingsbtn").addEventListener("click", function () {
+              document.getElementById("overlays").style.display = "flex";
+            });
 
-});
-document.querySelector(".jointbtn").addEventListener("click", function () {
-
-  document.getElementById("overlay").style.display = "flex";
-
-  console.log("JoinClick");
-
-});
 function setDefData(){
      const hostUid = localStorage.getItem('tmpUid');
       if(hostUid==null){
@@ -129,6 +127,22 @@ function closeDialog() {
 }
 function hideDialog() {
   document.getElementById("overlay").style.display = "none";
+}
+function hideDialogS() {
+  document.getElementById("overlays").style.display = "none";
+}
+
+function saveSettings() {
+  const copyToggle = document.getElementById("copyToggle").checked;
+  const editToggle = document.getElementById("editToggle").checked;
+  const resetToggle = document.getElementById("resetToggle").value;
+
+  // Perform actions with the selected settings
+  console.log("Automatic Copy Text:", copyToggle);
+  console.log("Everyone can Edit Text:", editToggle);
+  console.log("Reset Shared URL:", resetToggle);
+
+  hideDialog();
 }
   
 

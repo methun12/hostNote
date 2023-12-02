@@ -295,3 +295,51 @@
     background-color: #f44336;
     color: white;
   }
+
+  /* Settings */
+
+  .overlays {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+  }
+
+  .alert-dialogs {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px;
+  }
+
+
+  .toggle-btns {
+    margin-bottom: 10px;
+  }
+
+  .btn-groups {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+
+
+  .cancel-btns {
+    background-color: #f44336;
+    color: white;
+  }
+
+  .save-btns {
+    background-color: #4CAF50;
+    color: white;
+  }
