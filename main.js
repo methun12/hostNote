@@ -106,6 +106,9 @@ document.querySelector(".burger").addEventListener("click", function () {
 
           document.querySelector(".hostbtn").addEventListener("click", function () {
                 document.getElementById('alert-background').style.display = 'block';
+                const uniqueUserID = localStorage.getItem("tmpUid");
+                document.getElementById('cdx').innerHTML = ""+uniqueUserID;
+                generateQR();
             });
 
           document.querySelector(".jointbtn").addEventListener("click", function () {
@@ -143,6 +146,18 @@ function saveSettings() {
   console.log("Reset Shared URL:", resetToggle);
 
   hideDialog();
+}
+
+function generateQR() {
+  var url = "https://rcvcalculator.blogspot.com/"+uniqueUserID;
+  if (url !== '') {
+      var qr = qrcode(0, 'M');
+      qr.addData(url);
+      qr.make();
+      document.getElementById('qrcode').innerHTML = qr.createImgTag();
+  } else {
+      alert('Please enter a valid URL.');
+  }
 }
   
 

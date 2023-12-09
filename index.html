@@ -14,6 +14,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator/qrcode.js"></script>
 
    
     
@@ -53,10 +54,10 @@
 <div id="alert-background" class="alert-background">
     <div class="alert-dialog">
       <span><strong>QR Code:</strong></span><br>
-      <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=SampleQRCode" alt="QR Code"><br><br>
-      <span><strong>URL:</strong></span><br>
-      <p>https://www.example.com</p>
-      <button class="btn copy-btn" onclick="copyUrl()">Copy URL</button><br><br>
+      <div id="qrcode"></div>
+      <span><strong>Host Code:</strong></span><br>
+      <p id="cdx">https://www.example.com</p>
+      <button class="btn copy-btn" onclick="copyUrl()">Copy Code</button><br><br>
       <button class="btn cancel-btn" onclick="closeDialog()">Cancel</button>
     </div>
   </div>

@@ -184,7 +184,7 @@
     text-align: center;
   }
 
-  img {
+  #qrcode {
     max-width: 100%;
     height: auto;
   }
